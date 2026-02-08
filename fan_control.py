@@ -1,7 +1,7 @@
 import socket
 import json
 
-FAN_IP = "192.168.1.100"   # your detected IP
+FAN_IP = "********"   # your detected IP
 PORT = 5600
 
 command = {
