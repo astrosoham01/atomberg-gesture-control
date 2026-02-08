@@ -5,7 +5,7 @@ import json
 import time
 
 # 🔌 Fan local IP
-FAN_IP = "192.168.1.100"
+FAN_IP = "********"
 PORT = 5600
 
 # 📡 Send command to fan
@@ -18,7 +18,7 @@ def send_command(cmd):
     sock.close()
 
 
-# 🖐 Mediapipe setup
+#  Mediapipe setup
 mp_hands = mp.solutions.hands
 hands = mp_hands.Hands(
     static_image_mode=False,
@@ -58,13 +58,13 @@ while True:
             if lmList:
                 fingers = []
 
-                # 👍 Thumb
+                #  Thumb
                 if lmList[4][0] < lmList[3][0]:
                     fingers.append(1)
                 else:
                     fingers.append(0)
 
-                # ☝️ Other 4 fingers
+                # Other 4 fingers
                 tips = [8, 12, 16, 20]
                 for tip in tips:
                     if lmList[tip][1] < lmList[tip-2][1]:
