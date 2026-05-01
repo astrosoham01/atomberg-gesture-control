@@ -24,6 +24,3 @@ pip install -r requirements.txt
 
 Run:
 python gesture_fan_control.py
-
-## Demo
-(Uploading demo video soon)
